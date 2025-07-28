@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Šiljakovina – Večera i meditacija u prirodi</title>
-  <meta name="description" content="Doživite čarobnu večeru u srcu prirode Šiljakovine, okruženi tišinom, šumskim zrakom i svjetlošću svijeća. Spojite domaće okuse s vođenom meditacijom pod zvjezdanim nebom za potpuni odmor tijela i duha." />
+  <meta name="description" content="Doživite čarobnu večeru u prirodi Šiljakovine – večeru pod svijećama, vođenu meditaciju, opuštanje u šatorima i tišinu šume pod zvjezdanim nebom." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    .video-bg video {
+    .bg-video {
       position: absolute;
       top: 0;
       left: 0;
@@ -18,20 +18,17 @@
     }
   </style>
 </head>
-<body>
-  <!-- Sekcija 1: Hero video pozadina -->
-  <section class="relative h-screen flex items-center justify-center text-white overflow-hidden video-bg">
-    <video autoplay muted loop playsinline>
+<body class="relative">
+  <!-- Sekcija 1: Video u pozadini + slogan -->
+  <section class="h-screen relative flex items-center justify-center text-white">
+    <video autoplay muted loop playsinline class="bg-video">
       <source src="hero-video.mp4" type="video/mp4" />
-      Vaš preglednik ne podržava video tag.
     </video>
-    <div class="text-center bg-black bg-opacity-50 p-8 rounded-xl relative z-10">
+    <div class="text-center bg-black bg-opacity-50 p-8 rounded-xl z-10">
       <h1 class="text-5xl font-bold mb-4">Mjesto gdje priroda priča</h1>
       <p class="text-xl">Dobrodošli u Šiljakovinu – večera i meditacija u prirodi</p>
       <a href="#iskustvo" class="mt-6 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">Saznaj više</a>
-      <a href="mailto:rezervacije@siljakovina.hr" class="mt-4 ml-4 inline-block bg-white text-green-700 font-bold py-2 px-6 rounded-full border border-green-700 hover:bg-green-100 transition">
-        Rezerviraj svoje mjesto
-      </a>
+      <a href="mailto:rezervacije@siljakovina.hr" class="mt-4 ml-4 inline-block bg-white text-green-700 font-bold py-2 px-6 rounded-full border border-green-700 hover:bg-green-100 transition">Rezerviraj mjesto</a>
     </div>
   </section>
 
@@ -40,12 +37,12 @@
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-green-900 mb-6">Večera i meditacija u prirodi</h2>
       <p class="text-lg text-gray-800 leading-relaxed">
-        Doživite čarobnu večeru u srcu prirode Šiljakovine, okruženi tišinom, šumskim zrakom i svjetlošću svijeća. Spojite domaće okuse s vođenom meditacijom pod zvjezdanim nebom za potpuni odmor tijela i duha.
+        Zamislite večeru pod svijećama u srcu šume. Tišina, svjež zrak, domaća hrana, mirisi prirode i vođena meditacija pod zvijezdama. Sve završava noćenjem u udobnim šatorima – potpuno uranjanje u prirodu.
       </p>
     </div>
   </section>
 
-  <!-- Sekcija 3: Galerija doživljaja -->
+  <!-- Sekcija 3: Galerija -->
   <section class="bg-white py-16 px-6" id="galerija">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-green-900 mb-10">Galerija doživljaja</h2>
@@ -53,9 +50,9 @@
         <img src="https://source.unsplash.com/600x400/?nature,dinner" alt="Večera u prirodi" class="rounded-xl shadow-md">
         <img src="https://source.unsplash.com/600x400/?meditation,forest" alt="Meditacija u šumi" class="rounded-xl shadow-md">
         <img src="https://source.unsplash.com/600x400/?stars,night" alt="Zvjezdano nebo" class="rounded-xl shadow-md">
-        <img src="https://source.unsplash.com/600x400/?campfire,forest" alt="Atmosfera vatre" class="rounded-xl shadow-md">
-        <img src="https://source.unsplash.com/600x400/?relax,nature" alt="Opuštanje u prirodi" class="rounded-xl shadow-md">
-        <img src="https://source.unsplash.com/600x400/?silence,woods" alt="Tišina šume" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?tent,camping" alt="Noćenje u šatorima" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?fire,forest" alt="Vatra i druženje" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?relaxation,nature" alt="Potpuno opuštanje" class="rounded-xl shadow-md">
       </div>
     </div>
   </section>
