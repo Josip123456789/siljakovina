@@ -6,11 +6,20 @@
   <title>Šiljakovina – Večera i meditacija u prirodi</title>
   <meta name="description" content="Doživite čarobnu večeru u srcu prirode Šiljakovine, okruženi tišinom, šumskim zrakom i svjetlošću svijeća. Spojite domaće okuse s vođenom meditacijom pod zvjezdanim nebom za potpuni odmor tijela i duha." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body, html { margin: 0; padding: 0; }
+    video { object-fit: cover; }
+  </style>
 </head>
-<body>
-  <!-- Sekcija 1: Hero slika + slogan -->
-  <section class="h-screen bg-cover bg-center flex items-center justify-center text-white" style="background-image: url('https://source.unsplash.com/1600x900/?forest');">
-    <div class="text-center bg-black bg-opacity-50 p-8 rounded-xl">
+<body class="text-gray-800">
+
+  <!-- Sekcija 1: Hero video + slogan -->
+  <section class="relative h-screen overflow-hidden text-white flex items-center justify-center">
+    <video autoplay muted loop playsinline class="absolute w-auto min-w-full min-h-full max-w-none object-cover z-0">
+      <source src="12062033_3840_2160_30fps.mp4" type="video/mp4" />
+      Tvoj preglednik ne podržava video.
+    </video>
+    <div class="relative z-10 text-center bg-black bg-opacity-50 p-8 rounded-xl">
       <h1 class="text-5xl font-bold mb-4">Mjesto gdje priroda priča</h1>
       <p class="text-xl">Dobrodošli u Šiljakovinu – večera i meditacija u prirodi</p>
       <a href="#iskustvo" class="mt-6 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">Saznaj više</a>
@@ -29,54 +38,48 @@
       </p>
     </div>
   </section>
+
+  <!-- Sekcija 3: Galerija -->
+  <section class="bg-white py-16 px-6" id="galerija">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-10">Galerija doživljaja</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://source.unsplash.com/600x400/?nature,dinner" alt="Večera u prirodi" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?meditation,forest" alt="Meditacija u šumi" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?stars,night" alt="Zvjezdano nebo" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?campfire,forest" alt="Atmosfera vatre" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?relax,nature" alt="Opuštanje u prirodi" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?silence,woods" alt="Tišina šume" class="rounded-xl shadow-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcija 4: Kontakt forma -->
+  <section class="bg-green-100 py-16 px-6" id="kontakt">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 text-center mb-8">Kontaktiraj nas</h2>
+      <p class="text-lg text-gray-800 mb-6 text-center">
+        Imaš pitanje ili želiš rezervirati svoje mjesto za nezaboravnu večeru i meditaciju u prirodi? Ispuni kratki obrazac i uskoro ćemo ti se javiti. Veselimo se tvojoj poruci!
+      </p>
+      <form action="mailto:rezervacije@siljakovina.hr" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
+        <div>
+          <label for="ime" class="block text-sm font-medium text-gray-700">Ime i prezime</label>
+          <input type="text" name="ime" id="ime" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email adresa</label>
+          <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
+        </div>
+        <div>
+          <label for="poruka" class="block text-sm font-medium text-gray-700">Poruka</label>
+          <textarea name="poruka" id="poruka" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+          Pošalji poruku
+        </button>
+      </form>
+    </div>
+  </section>
+
 </body>
 </html>
-<!-- Sekcija 3: Galerija -->
-<section class="bg-white py-16 px-6" id="galerija">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-3xl font-bold text-green-900 mb-10">Galerija doživljaja</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="https://source.unsplash.com/600x400/?nature,dinner" alt="Večera u prirodi" class="rounded-xl shadow-md">
-      <img src="https://source.unsplash.com/600x400/?meditation,forest" alt="Meditacija u šumi" class="rounded-xl shadow-md">
-      <img src="https://source.unsplash.com/600x400/?stars,night" alt="Zvjezdano nebo" class="rounded-xl shadow-md">
-      <img src="https://source.unsplash.com/600x400/?campfire,forest" alt="Atmosfera vatre" class="rounded-xl shadow-md">
-      <img src="https://source.unsplash.com/600x400/?relax,nature" alt="Opuštanje u prirodi" class="rounded-xl shadow-md">
-      <img src="https://source.unsplash.com/600x400/?silence,woods" alt="Tišina šume" class="rounded-xl shadow-md">
-    </div>
-  </div>
-</section>
-</body>
-<!-- Sekcija 4: Kontakt forma -->
-<section class="bg-green-100 py-16 px-6" id="kontakt">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold text-green-900 text-center mb-8">Kontaktiraj nas</h2>
-    <form action="mailto:rezervacije@siljakovina.hr" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
-      <div>
-        <label for="ime" class="block text-sm font-medium text-gray-700">Ime i prezime</label>
-        <input type="text" name="ime" id="ime" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email adresa</label>
-        <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
-      </div>
-      <div>
-        <label for="poruka" class="block text-sm font-medium text-gray-700">Poruka</label>
-        <textarea name="poruka" id="poruka" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"></textarea>
-      </div>
-      <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
-        Pošalji poruku
-      </button>
-    </form>
-  </div>
-</section>
-<!-- 
-  Sekcija 4: Kontakt forma
-  Ova sekcija omogućuje posjetiteljima da brzo i jednostavno stupe u kontakt putem obrasca.
-  Namijenjena je za postavljanje pitanja ili rezervaciju mjesta za večeru i meditaciju u prirodi.
-  Naslov "Kontaktiraj nas" praćen je toplom, pozivajućom porukom koja potiče korisnike na interakciju.
-  Obrazac uključuje polja za ime i prezime, email adresu i poruku, te gumb za slanje poruke putem e-maila.
-  Sve je dizajnirano u svijetloj i prirodnoj zeleno-bijeloj paleti koja se uklapa u opći vizual stranice.
--->
-<section class="bg-green-100 py-16 px-6" id="kontakt">
-  ...
-</section>
