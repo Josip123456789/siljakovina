@@ -4,53 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Šiljakovina – Večera i meditacija u prirodi</title>
-  <meta name="description" content="Doživite čarobnu večeru u srcu prirode Šiljakovine uz svjetlost svijeća i zvjezdano nebo." />
+  <meta name="description" content="Doživite čarobnu večeru u srcu prirode Šiljakovine, okruženi tišinom, šumskim zrakom i svjetlošću svijeća. Spojite domaće okuse s vođenom meditacijom pod zvjezdanim nebom za potpuni odmor tijela i duha." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-    }
-    video.bg-video {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
+    .video-bg video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       z-index: -1;
     }
   </style>
 </head>
 <body>
-  <!-- VIDEO POZADINA -->
-  <video autoplay muted loop class="bg-video">
-    <source src="video/12062033_3840_2160_30fps.mp4" type="video/mp4">
-    Tvoj preglednik ne podržava HTML5 video.
-  </video>
-
-  <!-- SEKCIJA 1: HERO -->
-  <section class="h-screen flex items-center justify-center text-white text-center px-4">
-    <div class="bg-black bg-opacity-50 p-10 rounded-xl">
+  <!-- Sekcija 1: Hero video pozadina -->
+  <section class="relative h-screen flex items-center justify-center text-white overflow-hidden video-bg">
+    <video autoplay muted loop playsinline>
+      <source src="hero-video.mp4" type="video/mp4" />
+      Vaš preglednik ne podržava video tag.
+    </video>
+    <div class="text-center bg-black bg-opacity-50 p-8 rounded-xl relative z-10">
       <h1 class="text-5xl font-bold mb-4">Mjesto gdje priroda priča</h1>
-      <p class="text-xl mb-6">Dobrodošli u Šiljakovinu – večera i meditacija u prirodi</p>
-      <a href="#iskustvo" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full mr-4">Saznaj više</a>
-      <a href="#kontakt" class="bg-white text-green-700 font-bold py-2 px-6 rounded-full border border-green-700 hover:bg-green-100 transition">Rezerviraj svoje mjesto</a>
+      <p class="text-xl">Dobrodošli u Šiljakovinu – večera i meditacija u prirodi</p>
+      <a href="#iskustvo" class="mt-6 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">Saznaj više</a>
+      <a href="mailto:rezervacije@siljakovina.hr" class="mt-4 ml-4 inline-block bg-white text-green-700 font-bold py-2 px-6 rounded-full border border-green-700 hover:bg-green-100 transition">
+        Rezerviraj svoje mjesto
+      </a>
     </div>
   </section>
 
-  <!-- SEKCIJA 2: ISKUSTVO -->
+  <!-- Sekcija 2: Opis iskustva -->
   <section class="bg-green-50 py-16 px-6" id="iskustvo">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-green-900 mb-6">Večera i meditacija u prirodi</h2>
       <p class="text-lg text-gray-800 leading-relaxed">
-        Doživite čarobnu večeru u srcu prirode Šiljakovine, okruženi tišinom, šumskim zrakom i svjetlošću svijeća.
-        Spojite domaće okuse s vođenom meditacijom pod zvjezdanim nebom za potpuni odmor tijela i duha.
+        Doživite čarobnu večeru u srcu prirode Šiljakovine, okruženi tišinom, šumskim zrakom i svjetlošću svijeća. Spojite domaće okuse s vođenom meditacijom pod zvjezdanim nebom za potpuni odmor tijela i duha.
       </p>
     </div>
   </section>
 
-  <!-- SEKCIJA 3: GALERIJA -->
+  <!-- Sekcija 3: Galerija doživljaja -->
   <section class="bg-white py-16 px-6" id="galerija">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold text-green-900 mb-10">Galerija doživljaja</h2>
@@ -65,13 +60,12 @@
     </div>
   </section>
 
-  <!-- SEKCIJA 4: KONTAKT -->
+  <!-- Sekcija 4: Kontakt forma -->
   <section class="bg-green-100 py-16 px-6" id="kontakt">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-3xl font-bold text-green-900 text-center mb-8">Kontaktiraj nas</h2>
       <p class="text-lg text-gray-800 mb-6 text-center">
-        Imaš pitanje ili želiš rezervirati svoje mjesto za nezaboravnu večeru i meditaciju u prirodi?
-        Ispuni kratki obrazac i uskoro ćemo ti se javiti. Veselimo se tvojoj poruci!
+        Imaš pitanje ili želiš rezervirati svoje mjesto za nezaboravnu večeru i meditaciju u prirodi? Ispuni kratki obrazac i uskoro ćemo ti se javiti. Veselimo se tvojoj poruci!
       </p>
       <form action="mailto:rezervacije@siljakovina.hr" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
         <div>
