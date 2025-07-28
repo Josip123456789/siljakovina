@@ -3,36 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Šiljakovina – Večera i meditacija u prirodi</title>
-  <meta name="description" content="Doživite večeru, meditaciju i noćenje u šatorima usred prirode Šiljakovine. Spoj domaćih okusa, mira i zvjezdanog neba u srcu šume." />
+  <title>Šiljakovina – Večera, meditacija i spavanje u prirodi</title>
+  <meta name="description" content="Doživi večeru, meditaciju i noćenje pod zvijezdama u šatorima – Šiljakovina, mjesto gdje priroda priča." />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
   <style>
-    video::-webkit-media-controls {
-      display: none !important;
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
-<body class="text-white">
+<body class="text-gray-900">
 
-  <!-- Sekcija 1: Hero video + slogan -->
-  <section class="relative h-screen overflow-hidden">
-    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
-      <source src="12062033_3840_2160_30fps.mp4" type="video/mp4">
-      Tvoj preglednik ne podržava video tag.
+  <!-- Sekcija 1: Video pozadina + hero tekst -->
+  <section class="h-screen flex items-center justify-center text-white relative">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="Hero video.mp4" type="video/mp4" />
     </video>
-    <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center p-6 text-center">
+    <div class="overlay absolute inset-0"></div>
+    <div class="relative text-center p-8 rounded-xl">
       <h1 class="text-5xl font-bold mb-4">Mjesto gdje priroda priča</h1>
-      <p class="text-xl max-w-2xl">
-        Dobrodošli u Šiljakovinu – mjesto gdje večera uz svijeće, meditacija pod zvijezdama i noćenje u šatorima čine nezaboravno iskustvo. Sve u srcu šume, daleko od svakodnevice.
-      </p>
-      <a href="#iskustvo" class="mt-6 inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">Saznaj više</a>
-      <a href="#kontakt" class="mt-4 ml-4 inline-block bg-white text-green-700 font-bold py-2 px-6 rounded-full border border-green-700 hover:bg-green-100 transition">
-        Rezerviraj svoje mjesto
-      </a>
+      <p class="text-xl mb-6">Večera, meditacija i noć pod zvijezdama u šatorima</p>
+      <a href="#iskustvo" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full mr-4">Saznaj više</a>
+      <a href="mailto:rezervacije@siljakovina.hr" class="bg-white text-green-700 font-bold py-2 px-6 rounded-full border border-green-700 hover:bg-green-100">Rezerviraj sada</a>
     </div>
   </section>
 
-  <!-- Daljnji sadržaj ide ispod (iskustvo, galerija, kontakt itd.) -->
+  <!-- Sekcija 2: Iskustvo -->
+  <section class="bg-green-50 py-16 px-6" id="iskustvo">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Večera, meditacija i spavanje u prirodi</h2>
+      <p class="text-lg text-gray-800 leading-relaxed">
+        Na brdu iznad Šiljakovine doživjet ćeš potpuno opuštanje: uz domaću večeru u prirodi, zvukove tišine i vođenu meditaciju pod zvjezdanim nebom. Noć provodiš u udobnim šatorima, okružen šumom i svježim zrakom – savršeno za odmor tijela i duha.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sekcija 3: Galerija -->
+  <section class="bg-white py-16 px-6" id="galerija">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-10">Galerija doživljaja</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://source.unsplash.com/600x400/?forest,dinner" alt="Večera u prirodi" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?meditation,nature" alt="Meditacija u prirodi" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?tent,night" alt="Noćenje u šatoru" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?campfire,stars" alt="Zvjezdano nebo i vatra" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?relaxing,woods" alt="Opuštanje u šumi" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?nature,silence" alt="Tišina prirode" class="rounded-xl shadow-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sekcija 4: Kontakt forma -->
+  <section class="bg-green-100 py-16 px-6" id="kontakt">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 text-center mb-8">Kontaktiraj nas</h2>
+      <p class="text-lg text-gray-800 mb-6 text-center">
+        Imaš pitanje ili želiš rezervirati svoje mjesto? Ispuni kratki obrazac i uskoro ćemo ti se javiti. Veselimo se tvojoj poruci!
+      </p>
+      <form action="mailto:rezervacije@siljakovina.hr" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
+        <div>
+          <label for="ime" class="block text-sm font-medium text-gray-700">Ime i prezime</label>
+          <input type="text" name="ime" id="ime" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email adresa</label>
+          <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
+        </div>
+        <div>
+          <label for="poruka" class="block text-sm font-medium text-gray-700">Poruka</label>
+          <textarea name="poruka" id="poruka" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+          Pošalji poruku
+        </button>
+      </form>
+    </div>
+  </section>
 
 </body>
 </html>
