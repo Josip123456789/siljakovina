@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Šiljakovina – Večera i meditacija u prirodi</title>
+  <meta name="description" content="Večera, meditacija i noćenje u prirodi pod šatorima uz svijeće i zvjezdano nebo." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; overflow-x: hidden; }
+    section { position: relative; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Hero sekcija s videom -->
+  <section class="h-screen overflow-hidden">
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+      <source src="hero.mp4" type="video/mp4" />
+    </video>
+    <div class="relative z-10 flex flex-col items-center justify-center text-center h-full text-white bg-black bg-opacity-40 p-8">
+      <h1 class="text-5xl font-bold mb-4">Mjesto gdje priroda priča</h1>
+      <p class="text-xl mb-6">Večera, meditacija i šatori pod zvijezdama</p>
+      <a href="#kontakt" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-full">Rezerviraj sada</a>
+    </div>
+  </section>
+
+  <!-- Iskustvo -->
+  <section class="bg-green-50 py-16 px-6" id="iskustvo">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-6">Jedinstveno iskustvo</h2>
+      <p class="text-lg text-gray-800 leading-relaxed">
+        U Šiljakovini vas očekuje večera uz svijeće, noćenje u šatorima pod krošnjama, i vođena meditacija pod zvijezdama. Otkrijte tišinu prirode i ponovno se povežite sa sobom.
+      </p>
+    </div>
+  </section>
+
+  <!-- Galerija -->
+  <section class="bg-white py-16 px-6" id="galerija">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-900 mb-10">Galerija doživljaja</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://source.unsplash.com/600x400/?camping,night" alt="Šatori" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?meditation,nature" alt="Meditacija" class="rounded-xl shadow-md">
+        <img src="https://source.unsplash.com/600x400/?forest,dinner" alt="Večera" class="rounded-xl shadow-md">
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt forma -->
+  <section class="bg-green-100 py-16 px-6" id="kontakt">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-900 text-center mb-8">Kontaktiraj nas</h2>
+      <form action="mailto:rezervacije@siljakovina.hr" method="POST" enctype="text/plain" class="space-y-6 bg-white p-8 rounded-xl shadow-md">
+        <div>
+          <label for="ime" class="block text-sm font-medium text-gray-700">Ime i prezime</label>
+          <input type="text" name="ime" id="ime" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email adresa</label>
+          <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500" />
+        </div>
+        <div>
+          <label for="poruka" class="block text-sm font-medium text-gray-700">Poruka</label>
+          <textarea name="poruka" id="poruka" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Pošalji poruku</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
